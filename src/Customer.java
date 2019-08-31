@@ -51,4 +51,9 @@ public class Customer {
     public void setBusinessName(String businessName) {
         BusinessName = businessName;
     }
+
+    @Override
+    public String toString(){
+        return ("|\t" + CustomerID + "," + FirstName + ", " + Surname + ", " + BusinessName + ", " + Address + "\t1|");
+    }
 }

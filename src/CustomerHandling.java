@@ -31,43 +31,14 @@ public class CustomerHandling {
          */
         boolean terminate = false;
         while(!terminate) {
-            showMenu();
-            if (processOption(getOption()) == -1){
+            Utils.showMenu();
+            if (Utils.processOption(Utils.getOption()) == -1){
                 terminate = true;
             }
         }
 
-        endGreeting();
+        Utils.endGreeting();
 
 
-    }
-
-    private static void showMenu() {
-        System.out.println("Please select a number based on your option:");
-        System.out.println("1) Add a new customer");
-    }
-
-    private static int getOption() {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.next();
-        return(Integer.valueOf(input));
-    }
-
-    private static int processOption(int option){
-        switch(option){
-            case 1:
-                //TODO process adding customer
-                System.out.println("Adding new customer...");
-                break;
-            default:
-                return -1;
-        }
-        return 0;
-    }
-
-    private static void endGreeting() {
-        System.out.println("Thank you for using our software today!");
-        System.out.println("Copyright: Ghusharib Chohan");
-        System.out.println("Computer Science Undergraduate at Imperial College London");
     }
 }
